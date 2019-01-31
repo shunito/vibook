@@ -1,0 +1,42 @@
+{{ define "title" }}
+{{ .Page.Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<nav id="toc" class="toc" epub:type="toc">
+{{ if (.Site.Params.autoToC) }}
+    <ol>
+    {{- range $.Site.Pages.ByWeight.Reverse -}}
+        {{- if (.Params.include_toc) -}}
+            {{- $headers := findRE "<h[1-6](.*?)>(.|\n)*?</h[1-6]>" .Content -}}
+
+            {{- $permalink := .RelPermalink -}}
+            {{- range $headers -}}
+
+            {{ $headerId := . | replaceRE "<h[1-6](.*?)>(.|\n)*?</h[1-6]>" "$1" }}
+            {{ $headerId = $headerId | replaceRE "id=\"(.*?)\"" "$1" }}
+            {{ $headerId = trim $headerId " " }}
+            {{- $path := printf "%s#%s" $permalink $headerId -}}
+
+            {{- $depth := "" -}}
+            {{- if (in . "h1") -}}{{- $depth = 1 -}}{{- end -}}
+            {{- if (in . "h2") -}}{{- $depth = 2 -}}{{- end -}}
+            {{- if (in . "h3") -}}{{- $depth = 3 -}}{{- end -}}
+            {{- if (in . "h4") -}}{{- $depth = 4 -}}{{- end -}}
+            {{- if (in . "h5") -}}{{- $depth = 5 -}}{{- end -}}
+            {{- if (in . "h6") -}}{{- $depth = 6 -}}{{- end -}}
+            {{ if lt $depth $.Site.Params.tocDepth }}
+            <li class="depth-{{ $depth }}">
+                <a {{ printf "href=%q" $path | safeHTMLAttr }}>{{ . | plainify }}</a>
+            </li>
+            {{ end }}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+        </ol>
+{{ else }}
+    {{- .Content -}}
+{{ end }}
+</nav>
+{{ end }}

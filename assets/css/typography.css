@@ -1,0 +1,195 @@
+/* Typography settings */
+
+/* Noto Serif Japanese */
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif Japanese';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/NotoSerifCJKjp/NotoSerifCJKjp-Black.otf') format('opentype');
+}
+
+/* Noto Sans Japanese */
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 100;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-DemiLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Japanese';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/NotoSansCJKjp/NotoSansCJKjp-Black.otf') format('opentype');
+}
+
+/* Source Han CodeJP */
+@font-face {
+    font-family: 'Source Han CodeJP';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/SourceHanCodeJP/SourceHanCodeJP-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Source Han CodeJP';
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/SourceHanCodeJP/SourceHanCodeJP-Light.otf') format('opentype');
+}
+
+
+/* Font Settings */
+
+html {
+    font-size: 0.25mm;
+}
+
+#content {
+    font-family: 'Noto Serif Japanese', sans-serif, serif;
+    font-size: 18rem;
+    line-height: 1.7;
+}
+
+#content code {
+    font-size: 14rem;
+    font-family: 'Source Han CodeJP', monospace;
+    line-height: 1.4;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    color: inherit;
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-right: 0.625em;
+    margin-left: 0.625em;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-right: 0.83333em;
+    margin-left: 0.83333em;
+}
+
+h3 {
+    font-size: 1.125em;
+    margin-right: 1.11111em;
+    margin-left: 1.11111em;
+}
+
+h4 {
+    font-size: 1em;
+    margin-right: 1.25em;
+    margin-left: 1.25em;
+}
+
+h5 {
+    font-size: 0.875em;
+    margin-right: 1.42857em;
+    margin-left: 1.42857em;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin-right: 1.66667em;
+    margin-left: 1.66667em;
+}
+
+.vertical-rl p {
+    margin-right: 1.25em;
+    margin-left: 1.25em;  
+    hanging-punctuation: force-end;
+}
+
+.horizontal-tb p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;  
+    hanging-punctuation: force-end;
+}
+.footnotes{
+    font-size: 0.8em;
+}
+
+figure.fullWidth h4 {
+    font-size: 0.8em;
+}

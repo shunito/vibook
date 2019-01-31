@@ -1,0 +1,41 @@
+/* home-page */
+
+#content .home {
+    font-family: sans-serif;
+    padding: 4em;
+}
+
+.home dl {
+    margin-bottom:1em;
+}
+
+.home dt{
+    margin: 0;
+    padding: 0;
+}
+
+.home dd {
+    margin: 0.2em 0 0 2em;
+}
+
+.settings{
+    margin: 1em;
+    border: 1px solid #CCC;
+}
+
+.settings th,
+.settings td{
+    padding: 0.4em;
+    vertical-align: top;
+    border: 1px solid #DDD;
+    font-weight: bold;
+}
+
+.settings thead th,
+.settings thead td{
+    background-color: #DDD;
+}
+
+.settings tbody th {
+    background-color: #EEE;
+}

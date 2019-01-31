@@ -1,0 +1,58 @@
+
+@page {
+    margin-top: 15mm;
+    margin-left: 15mm;
+    margin-right: 15mm;
+    margin-bottom: 20mm;
+    vertical-align: top;
+    counter-increment: vPage;
+}
+
+@page :left {
+    @bottom-left {
+        content: counter(vPage);
+        margin-left: 3.75pt;
+        margin-bottom: 6mm;
+        writing-mode: horizontal-tb;
+    }
+}
+
+@page :right {
+    @bottom-right {
+        content: counter(vPage);
+        margin-right: 3.75pt;
+        margin-bottom: 6mm;
+        writing-mode: horizontal-tb;
+    }
+}
+
+/* 目次のページを1ページにする */
+/* Coverはページに数えない */
+/* TODO: frontmatterなどノンブル無しのページ形式を作る  */
+
+#toc {
+    counter-reset: vPage 1;
+}
+
+#toc a::after {
+    content: target-counter(attr(href), vPage, decimal);
+    writing-mode: horizontal-tb;
+    float: right;
+}
+
+/* 通常ページ見出しはH2：改ページする */
+h2 {
+    page-break-before: always;
+    counter-reset: sections 1;
+}
+
+/* ブロック途中で改ページしないでほしい */
+.footnotes,
+figure {
+    break-inside: avoid-page;
+}
+
+/* section */
+.section {
+    counter-increment: sections;
+}

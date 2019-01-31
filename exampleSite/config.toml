@@ -1,0 +1,39 @@
+baseURL = "http://localhost:1313/"
+languageCode = "ja"
+title = "viBook テストコンテンツ"
+hasCJKLanguage = true
+
+DefaultContentLanguage = "ja"
+theme = "vibook"
+
+FootnoteReturnLinkContents = "&#9166;"
+
+[params]
+  autoToC = true
+  dispToC = true
+  tocDepth = 4
+  pageSize = "A5"
+  writingMode = "vertical-rl"
+  hasCover = true
+  pageProgressionDirection = "rtl"
+  dendenFuture = true
+
+[mediaTypes]
+  [mediaTypes."application/xml"]
+    suffixes = ["opf"]
+
+[outputFormats]
+  [outputFormats.opf]
+    baseName = "content"
+    isPlainText = true
+    mediaType = "application/xml"
+
+[outputs]
+  home = ["HTML", "opf"]
+  page = ["HTML"]
+
+[blackfriday]
+  extensions = ["hardLineBreak"]
+
+[mmark]
+  extensions = ["hardLineBreak"]

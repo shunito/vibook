@@ -1,0 +1,54 @@
+{{ define "title" }}
+{{- .Site.Title -}}
+{{ end }}
+
+{{ define "main" }}
+<main class="home horizontal-tb">
+<h1>{{- .Site.Title -}}</h1>
+
+<p><a href="/viewer/#b=/&spread=true">vivliostyle-viewer</a></p>
+
+<table class="settings">
+  <thead>
+    <tr>
+      <th>設定</th>
+      <td>内容</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>pageSize</th>
+      <td>{{ with .Site.Params.pageSize }}{{ . }}{{ end }}</td>
+    </tr>
+    <tr>
+      <th>Base writingMode</th>
+      <td>{{ with .Site.Params.writingMode }}{{ . }}{{ end }}</td>
+    </tr>
+    <tr>
+      <th>pageProgressionDirection</th>
+      <td>{{ with .Site.Params.pageProgressionDirection }}{{ . }}{{ end }}</td>
+    </tr>
+    <tr>
+        <th>hasCover</th>
+        <td>{{ if .Site.Params.hasCover }}True{{ else}}False{{ end }}</td>
+      </tr>
+    <tr>
+      <th>autoToC</th>
+      <td>{{ if .Site.Params.autoToC }}True{{ else}}False{{ end }}</td>
+    </tr>
+    <tr>
+        <th>dispToC</th>
+        <td>{{ if .Site.Params.dispToC }}True{{ else}}False{{ end }}</td>
+      </tr>  
+  </tbody>
+</table>
+
+<div>
+<h2>Pages</h2>
+{{ range .Pages.Reverse }}
+  {{- partial "vivliostyle-viewer.html" . -}}
+{{ end }}
+</div>
+
+</main>
+{{ end }}

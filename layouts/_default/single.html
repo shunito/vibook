@@ -1,0 +1,19 @@
+{{ define "title" }}
+{{ .Page.Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{ $dendenFuture := .Site.Params.dendenFuture }}
+{{ if eq false (.Page.Params.dendenFuture)  }}
+    {{ $dendenFuture = .Page.Params.dendenFuture }}
+{{ end }}
+<article>
+    {{- if $dendenFuture -}}
+        {{ $page := .Content | replaceRE "\\^(.*?)\\^" "<span class=\"tcy\">$1</span>" }}
+        {{ $page := $page | replaceRE "{(.*?)\\|(.*?)}" "<ruby>$1<rt>$2</rt></ruby>" }}
+        {{- $page | safeHTML -}}
+    {{- else -}}
+        {{- .Content -}}
+    {{- end -}}
+</article>
+{{ end }}

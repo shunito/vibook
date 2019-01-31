@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="identifier0" version="3.0" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+<!-- TODO メタデータ生成の半自動化 -->
+</metadata>
+<manifest>
+{{ range .Pages.ByWeight.Reverse }}
+    {{ if eq .Type "nav" }}
+    <item media-type="application/xhtml+xml" href="{{ .URL }}" id="_{{ .URL }}" properties="nav" />
+    {{ else }}
+    <item media-type="application/xhtml+xml" href="{{ .URL }}" id="_{{ .URL }}" properties="svg" />
+    {{ end }}
+{{ end }}
+</manifest>
+<spine page-progression-direction="{{ .Site.Params.pageProgressionDirection }}">
+{{ range .Pages.ByWeight.Reverse }}
+    {{ if and ( eq .Type "nav" ) ( $.Site.Params.dispToC ) }}
+    <itemref idref="_{{ .URL }}" type="{{ .Type }}" kind="{{ .Kind }}" />
+    {{ else if and ( eq .Type "cover" ) ( $.Site.Params.hasCover ) }}
+    <itemref idref="_{{ .URL }}" type="{{ .Type }}" kind="{{ .Kind }}" />
+    {{ else }}
+    <itemref idref="_{{ .URL }}" type="{{ .Type }}" kind="{{ .Kind }}" />
+    {{ end }}
+{{ end }}
+</spine>
+<guide></guide>
+</package>

@@ -1,0 +1,11 @@
+{{ define "title" }}
+{{ .Page.Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+{{- with .Page.Params.cover_img -}}
+<div id="cover" style="background-image:url('{{.}}');">
+    {{ $.Page.Content }}
+</div>
+{{- end -}}
+{{ end }}
