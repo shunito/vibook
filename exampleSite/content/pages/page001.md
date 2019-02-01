@@ -12,7 +12,7 @@ include_toc: true
 {{% section class="frontmatter" %}}
 ### このコンテンツについて ###
 
-　本コンテンツは「[viBook](https://github.com/shunito/vibook)」の変換サンプル用コンテンツです。[青空文庫に掲載されたテキスト](http://www.aozora.gr.jp/cards/001263/files/50361_39049.html)をベースとしましたが、viBookの拡張機能(dendenFuture) の記法で制作したため、マークアップが異なる箇所を含みます。
+　本コンテンツは「[viBook](https://github.com/shunito/vibook)」の変換サンプル用コンテンツです。[青空文庫に掲載されたテキスト](http://www.aozora.gr.jp/cards/001263/files/50361_39049.html)をベースとした、でんでんコンバーターのサンプルを再調整しましたが、viBookの拡張機能(dendenFuture) の記法で制作したため、マークアップが異なる箇所を含みます。
 　dendenFutureは[でんでんマークダウン](https://conv.denshochan.com/markdown)の拡張機能のうち、グループルビと縦中横機能の再現を試みたものですが、いまだポンコツです。詳細はviBookのReadmeを参照ください。
 
 
