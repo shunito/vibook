@@ -1,1 +1,2 @@
-static/css/fonts/
+static/css/fonts/*
+!/static/css/fonts/.gitkeep
