@@ -3,19 +3,13 @@
 
 name = "viBook"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/shunito/vibook/blob/master/LICENSE"
 description = "vivliostyle Book theme"
-homepage = "http://example.com/"
-tags = []
+homepage = "https://github.com/shunito/vibook"
+tags = ["Docs","Documentation", ]
 features = []
 min_version = "0.41"
 
 [author]
   name = "Shunsuke Ito"
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  homepage = "https://github.com/shunito"
