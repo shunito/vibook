@@ -27,8 +27,22 @@
             {{- if (in . "h5") -}}{{- $depth = 5 -}}{{- end -}}
             {{- if (in . "h6") -}}{{- $depth = 6 -}}{{- end -}}
             {{ if lt $depth $.Site.Params.tocDepth }}
+
+            {{ $dendenFuture := $.Site.Params.dendenFuture }}
+            {{ if eq false ($.Page.Params.dendenFuture)  }}
+                {{ $dendenFuture = $.Page.Params.dendenFuture }}
+            {{ end }}
+
+            {{ $pageTitle := . | plainify }}
+            {{- if $dendenFuture -}}
+                {{ $pageTitle = $pageTitle | replaceRE "\\^(.*?)\\^" "<span class=\"tcy\">$1</span>" }}
+                {{ $pageTitle = $pageTitle | replaceRE "{(.*?)\\|(.*?)}" "<ruby>$1<rt>$2</rt></ruby>" }}
+            {{- end -}}
+    
+
+
             <li class="depth-{{ $depth }}">
-                <a {{ printf "href=%q" $path | safeHTMLAttr }}>{{ . | plainify }}</a>
+                <a {{ printf "href=%q" $path | safeHTMLAttr }}>{{ $pageTitle | safeHTML }}</a>
             </li>
             {{ end }}
             {{- end -}}

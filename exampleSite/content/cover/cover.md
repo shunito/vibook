@@ -6,5 +6,5 @@ weight: 9999
 lang: ""
 writingMode: "horizontal-tb"
 include_toc: false
-cover_img: "/cover/cover.png"
+cover_img: "/cover/cover.jpg"
 ---

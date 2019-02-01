@@ -1,6 +1,6 @@
 ---
 title: "こーど"
-date: 2019-01-24T19:07:10+09:00
+date: 2019-01-27T19:07:10+09:00
 draft: false
 weight: 10
 lang: ""
@@ -15,11 +15,21 @@ dendenFuture: false
 
 こーどです
 
-{{< highlight javascript "linenos=table,hl_lines=6,linenostart=199" >}}
+{{< highlight javascript "hl_lines=6,linenostart=199" >}}
 cont a = "NNN";
 // コメント
 
+/*
+  コメントブロックです。
+  長いコメント
+
+  たまにページをまたぐハイライトが妙なことろで生き別れになるのなんでだろう。
+
+  空行もあり
+*/
+
 function(){
+  let i;
   for(i=0;i<10;i++){
     console.log("あいうえお");
   }
@@ -30,7 +40,13 @@ a = b;
 
 for(){
   var int= 0;
+  console.log("あいうえお");
 }
+
+var json = {
+  "name" : "Shunsuke Ito",
+  "mail" : "shunsuke@test.jp",
+};
 {{< / highlight >}}
 
 
