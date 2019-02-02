@@ -6,49 +6,57 @@
 <main class="home horizontal-tb">
 <h1>{{- .Site.Title -}}</h1>
 
-<p><a href="/viewer/#b=/&spread=true">vivliostyle-viewer</a></p>
-
+<section>
+<h2>viBook テーマ設定</h2>
+<p>Hugo設定ファイル（config.toml）の設定状況です。</p>
 <table class="settings">
   <thead>
     <tr>
-      <th>設定</th>
+      <th>設定項目</th>
       <td>内容</td>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>pageSize</th>
+      <th>ページサイズ（pageSize）</th>
       <td>{{ with .Site.Params.pageSize }}{{ . }}{{ end }}</td>
     </tr>
     <tr>
-      <th>Base writingMode</th>
+      <th>縦書/横書（writingMode）</th>
       <td>{{ with .Site.Params.writingMode }}{{ . }}{{ end }}</td>
     </tr>
     <tr>
-      <th>pageProgressionDirection</th>
+      <th>綴じ方向（pageProgressionDirection）</th>
       <td>{{ with .Site.Params.pageProgressionDirection }}{{ . }}{{ end }}</td>
     </tr>
     <tr>
-        <th>hasCover</th>
-        <td>{{ if .Site.Params.hasCover }}True{{ else}}False{{ end }}</td>
+        <th>カバーページ有無（hasCover）</th>
+        <td>{{ if .Site.Params.hasCover }}あり{{ else}}なし{{ end }}</td>
       </tr>
     <tr>
-      <th>autoToC</th>
-      <td>{{ if .Site.Params.autoToC }}True{{ else}}False{{ end }}</td>
+      <th>目次ページ自動生成（autoToC）</th>
+      <td>{{ if .Site.Params.autoToC }}有効{{ else}}無効{{ end }}</td>
     </tr>
     <tr>
-        <th>dispToC</th>
-        <td>{{ if .Site.Params.dispToC }}True{{ else}}False{{ end }}</td>
+        <th>目次の表示（dispToC）</th>
+        <td>{{ if .Site.Params.dispToC }}あり{{ else}}なし{{ end }}</td>
       </tr>  
   </tbody>
 </table>
+</section>
 
-<div>
-<h2>Pages</h2>
-{{ range .Pages.Reverse }}
+<section>
+<h2>Vivliostyle プレビュー</h2>
+<p><a href="/viewer/#b=/&spread=true">全ページプレビュー</a></p>
+<br>
+
+<h2>ページ個別</h2>
+<ol>
+{{- range .Pages.Reverse -}}
   {{- partial "vivliostyle-viewer.html" . -}}
-{{ end }}
-</div>
+{{- end -}}
+</ol>
+</section>
 
 </main>
 {{ end }}

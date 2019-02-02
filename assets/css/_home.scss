@@ -2,20 +2,37 @@
 
 #content .home {
     font-family: sans-serif;
-    padding: 4em;
+    padding: 1em;
+    font-size: 1em;
 }
 
-.home dl {
+.home section {
+    padding:1em;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    margin-bottom:0.5em;
+}
+
+.home h1,
+.home h2,
+.home h3,
+.home h4,
+.home h5 {
+    margin:0 0 0.5em 0;
+}
+
+.home h2 {
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    background-color: #EEE;
+}
+
+.home p {
+    margin: 0 0 0.2em 1em;
+}
+
+.home ol {
     margin-bottom:1em;
-}
-
-.home dt{
-    margin: 0;
-    padding: 0;
-}
-
-.home dd {
-    margin: 0.2em 0 0 2em;
 }
 
 .settings{

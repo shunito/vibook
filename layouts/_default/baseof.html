@@ -3,9 +3,9 @@
     {{- partial "head.html" . -}}
     <body class="{{ with $.Params.writingMode }}{{ . }}{{else}}{{ $.Site.Params.writingMode | default "horizontal-tb" }}{{end}}">
         {{- partial "header.html" . -}}
-        <div id="content">
+        <main id="content">
         {{- block "main" . }}{{- end }}
-        </div>
+        </main>
         {{- partial "footer.html" . -}}
     </body>
 </html>

@@ -2,8 +2,8 @@
 @namespace epub "http://www.idpf.org/2007/ops";
 
 html {
-  orphans: 1;
-  widows: 1;
+  orphans: 2;
+  widows: 2;
 }
 
 body {
@@ -124,7 +124,13 @@ h1,h2,h3,h4,h5,h6,hr {
   text-combine: horizontal;
 }
 
-#toc ol { list-style-type: none; }
+#toc ol {
+  list-style-type: none;
+}
+
+#toc ol a {
+  text-decoration: none;
+}
 
 figure.fullWidth {
   widows: 100%;

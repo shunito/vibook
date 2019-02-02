@@ -1,9 +1,5 @@
-<dl>
-    <dt>
-        <a href="{{ .URL }}">{{ .Title }}</a>
-        <a href="{{ path.Join "/viewer/#x=" .URL | safeHTML}}">[viewer]</a>
-    </dt>
-    <dd>        
-        <div>{{ .Summary }}</div>
-    </dd>
-</dl>
+<li>
+    <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+    <p><a href="{{ path.Join "/viewer/#x=" .URL | safeHTML}}">[viewer]</a></p>
+    <p>{{ .Summary }}</p>
+</li>
