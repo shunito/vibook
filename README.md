@@ -20,7 +20,7 @@ Vivliostyle Book style Theme for
   - Section : All purpose content block
 - Hugo Pipes (SASS)
 - (experimental) Denden Future
-  - TYC class
+  - T class
   - Ruby (group ruby)
 
 # Screenshot
