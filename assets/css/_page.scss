@@ -1,3 +1,20 @@
+/* ページ 判型設定 */
+
+/* キーワード指定できるサイズ
+<page-size> = A5 | A4 | A3 | B5 | B4 | letter | legal | ledger
+A5:148×210mm
+A4:210×297mm
+A3:297×420mm
+B5:176x250mm
+B4:250x353mm
+JIS-B5:182x257mm
+JIS-B4:257x364mm
+letter:8.5inx11in
+legal:8.5x14in
+ledger:11x17in
+
+四六判:788×1091mm
+*/
 
 @page {
     margin-top: 15mm;
@@ -39,6 +56,12 @@
     writing-mode: horizontal-tb;
     float: right;
 }
+
+#toc li { clear: both; }
+#toc .depth-1 { font-weight: 500; }
+#toc .depth-2 { text-indent: 1em; }
+#toc .depth-3 { text-indent: 2em; }
+
 
 /* 通常ページ見出しはH2：改ページする */
 h2 {

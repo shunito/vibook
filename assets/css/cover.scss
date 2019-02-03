@@ -3,6 +3,7 @@
 @import "base";
 @import "typography";
 
+/* page size from config.toml */
 @page {
     size: {{ $.Site.Params.pageSize }};
     margin: 0mm;

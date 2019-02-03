@@ -10,15 +10,12 @@
     {{- range $.Site.Pages.ByWeight.Reverse -}}
         {{- if (.Params.include_toc) -}}
             {{- $headers := findRE "<h[1-6](.*?)>(.|\n)*?</h[1-6]>" .Content -}}
-
             {{- $permalink := .RelPermalink -}}
             {{- range $headers -}}
-
-            {{ $headerId := . | replaceRE "<h[1-6](.*?)>(.|\n)*?</h[1-6]>" "$1" }}
-            {{ $headerId = $headerId | replaceRE "id=\"(.*?)\"" "$1" }}
-            {{ $headerId = trim $headerId " " }}
+            {{- $headerId := . | replaceRE "<h[1-6](.*?)>(.|\n)*?</h[1-6]>" "$1" -}}
+            {{- $headerId = $headerId | replaceRE "id=\"(.*?)\"" "$1" -}}
+            {{- $headerId = trim $headerId " " -}}
             {{- $path := printf "%s#%s" $permalink $headerId -}}
-
             {{- $depth := "" -}}
             {{- if (in . "h1") -}}{{- $depth = 1 -}}{{- end -}}
             {{- if (in . "h2") -}}{{- $depth = 2 -}}{{- end -}}
@@ -26,25 +23,20 @@
             {{- if (in . "h4") -}}{{- $depth = 4 -}}{{- end -}}
             {{- if (in . "h5") -}}{{- $depth = 5 -}}{{- end -}}
             {{- if (in . "h6") -}}{{- $depth = 6 -}}{{- end -}}
-            {{ if lt $depth $.Site.Params.tocDepth }}
-
-            {{ $dendenFuture := $.Site.Params.dendenFuture }}
-            {{ if eq false ($.Page.Params.dendenFuture)  }}
-                {{ $dendenFuture = $.Page.Params.dendenFuture }}
-            {{ end }}
-
-            {{ $pageTitle := . | plainify }}
-            {{- if $dendenFuture -}}
-                {{ $pageTitle = $pageTitle | replaceRE "\\^(.*?)\\^" "<span class=\"tcy\">$1</span>" }}
-                {{ $pageTitle = $pageTitle | replaceRE "{(.*?)\\|(.*?)}" "<ruby>$1<rt>$2</rt></ruby>" }}
-            {{- end -}}
-    
-
-
-            <li class="depth-{{ $depth }}">
-                <a {{ printf "href=%q" $path | safeHTMLAttr }}>{{ $pageTitle | safeHTML }}</a>
-            </li>
-            {{ end }}
+            {{- if le $depth $.Site.Params.tocDepth -}}
+                {{- $dendenFuture := $.Site.Params.dendenFuture -}}
+                {{- if eq false ($.Page.Params.dendenFuture) -}}
+                    {{- $dendenFuture = $.Page.Params.dendenFuture -}}
+                {{- end -}}
+                {{- $pageTitle := . | plainify -}}
+                {{- if $dendenFuture -}}
+                    {{- $pageTitle = $pageTitle | replaceRE "\\^(.*?)\\^" "<span class=\"tcy\">$1</span>" -}}
+                    {{- $pageTitle = $pageTitle | replaceRE "{(.*?)\\|(.*?)}" "<ruby>$1<rt>$2</rt></ruby>" -}}
+                {{- end -}}
+                <li class="depth-{{ $depth }}">
+                    <a {{ printf "href=%q" $path | safeHTMLAttr }}>{{ $pageTitle | safeHTML }}</a>
+                </li>
+                {{- end -}}
             {{- end -}}
         {{- end -}}
     {{- end -}}

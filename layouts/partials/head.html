@@ -7,16 +7,16 @@
         <meta name="writing-mode" content="{{ with $.Params.writingMode }}{{ . }}{{else}}{{ .Site.Params.writingMode }}{{end}}" />
         <meta name="pageSize" content="{{ with $.Params.pageSize }}{{ . }}{{else}}{{ .Site.Params.pageSize }}{{end}}" />
         <meta name="type" content="{{ .Type }}" />
-        {{ $resourcename := "css/book.scss" }}
-        {{ if ( eq .Type "cover" ) }}
+
+        {{- $resourcename := "css/book.scss" -}}
+        {{- if ( eq .Type "cover" ) -}}
             {{ $resourcename = printf "css/cover.scss" }}
-        {{ end}}
-        {{ $sassTemplate := resources.Get $resourcename }}
+        {{- end -}}
+        {{- $sassTemplate := resources.Get $resourcename -}}
         {{ $style := $sassTemplate | resources.ExecuteAsTemplate "css/vibook.scss" . | toCSS | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-        {{ $resourcename := .Site.Params.pageProgressionDirection | lower | printf "css/book-%s.scss" }}
+        {{- $resourcename := .Site.Params.pageProgressionDirection | lower | printf "css/book-%s.scss" -}}
         {{ $style := resources.Get $resourcename | toCSS | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
-
     </head>
