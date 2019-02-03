@@ -85,8 +85,7 @@ viBookは静的サイトジェネレータHugoの強力なサイト（ページ�
 - Hugoの機能から
   - 組み込みの軽量サーバによるリアルタイムプレビュー。 （原稿更新すると自動的にリロードしてくれます。）
   - Hugoのテンプレート機能による柔軟なインクルードや目次などリストの生成。
-    - インデックスの自動生成  
-    目次（content.opf）の半自動生成により、Vivliostyleに擬似的にEPUBとして認識させ、全ページ通してのプレビューが可能です。
+    - content.opfと論理目次（nav.html）の半自動生成により、Vivliostyleに擬似的にEPUBとして認識させ、全ページ通してのプレビューが可能です。
   - ShortcodesによるMarkdownの拡張。  
   [標準で準備されているShortcodes](https://gohugo.io/content-management/shortcodes/)だけでもいろいろできます。
     - figure は特に使っていくと良さそう。
