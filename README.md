@@ -33,7 +33,7 @@ Vivliostyle Book style Theme for
 In the root of your Hugo site directory run:
 
 ```shell
-git@github.com:shunito/vibook.git themes/vibook
+git clone git@github.com:shunito/vibook.git themes/vibook
 ```
 
 ## fonts
