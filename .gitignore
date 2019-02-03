@@ -1,2 +1,6 @@
 static/css/fonts/*
 !/static/css/fonts/.gitkeep
+
+.env
+.DS_Store
+public/
