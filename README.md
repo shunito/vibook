@@ -93,7 +93,7 @@ viBookは静的サイトジェネレータHugoの強力なサイト（ページ�
     - viBookではmathとsectionの2つを用意。
       - math はmarkdown変換を通さずVivliostyleのMathJaxに値を渡します。
       - section はclassを追加するための汎用のブロックです。CSSの拡張と合わせるといろいろ捗ります。
-  - Hugo PipesによるCSSの効率的な管理。
+  - [Hugo Pipes](https://gohugo.io/hugo-pipes/)によるCSSの効率的な管理。
     - Hugoの変数をSCSS内で利用できるため、ページサイズをCSSに反映したり（今のところこれくらいしか使ってないですが）
     - ※Hugo Pipesを使うにはHugo Extended版が必要です。
 - Vivliostyleの機能から
