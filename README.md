@@ -109,10 +109,10 @@ viBookは静的サイトジェネレータHugoの強力なサイト（ページ�
   現在はページの持つ「Weight」の大きい順に並べています。 （[Hugoの標準](https://gohugo.io/templates/lists/#default-weight-date-linktitle-filepath) では、Weight > Date > LinkTitle > FilePath）  
   Weightの次はFilePathで並べたかったんですが方法がわからず、ページの日付で調整しています。PagesはFilePath（Filename）の並び固定にしてしまったほうがスッキリするかも。
 - [でんでんコンバーター](https://conv.denshochan.com/)のモノルビ対応が再現できない。でんでんつよい。
-  - でんでんコンバーターの表現を再現したかったので、viBookのサンプルにでんでんコンバーターのサンプル用コンテンツを記法を再調整の上盛り込んでいます。（もともとの文章は青空文庫からなので問題ないと思いますが）
+  - でんでんコンバーターの表現を再現したかったので、viBookのサンプルにでんでんコンバーターのサンプル用コンテンツを記法を再調整の上で取り込んでいます。（もともとの文章は青空文庫からなので問題ないと思いますが）
 - ハイライトしたCodeのブロックをVivliostyleを通すとレイアウトずれる。ほかレイアウトいろいろはCSS調整を細かくしないと結局難しい。SCSS使えるだけでも結構良いと思うけど。  
   そもそもハイライトの行数表示を使うと不要な空行が発生したり、もう少し研究が必要。
-- Hugoと組み合わせられる[Mmark](https://gohugo.io/content-management/formats/#mmark)というMarkdown処理系があり、これを使うとBlock Level Attributes（classつけたり）など、さらに便利に使えると思ったんだけど、Hugoと組み合わせると定義リスト記法が動かないなど問題あり。  
+- Hugoと組み合わせられる[Mmark](https://gohugo.io/content-management/formats/#mmark)というMarkdown処理系があり、これを使うとBlock Level Attributes（classつけたり）など、さらに便利に使えると思ったんだけど、定義リスト記法が動かないなど問題あり。  
 結局Markdownにsectionという汎用のShortcodesを作ってしのぎました。定義リストの件はHugoにPR送ったので取り込まれるといいなぁ。
 - Readmeの途中で力尽きる作者の英語力
   - Hugoには多言語化機能があるので、色々できそうではあるんだけど。
