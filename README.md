@@ -18,9 +18,9 @@ Vivliostyle Book style Theme for
 - Shortcode
   - Math : for Vivliostyle MathJax Future
   - Section : All purpose content block
-- Hugo Pipes (SASS)
+- Hugo Pipes (SCSS)
 - (experimental) Denden Future
-  - T class
+  - TCY class
   - Ruby (group ruby)
 
 # Screenshot
