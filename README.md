@@ -24,7 +24,7 @@ Vivliostyle Book style Theme for
   - Ruby (group ruby)
 
 # Screenshot
-![Theme Screenshot](images/screenshot1.png)
+![Theme Screenshot](images/screenshot.png)
 
 ![Theme Screenshot](images/screenshot2.png)
 

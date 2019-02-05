@@ -4,7 +4,7 @@
 name = "viBook"
 license = "MIT"
 licenselink = "https://github.com/shunito/vibook/blob/master/LICENSE"
-description = "vivliostyle Book theme"
+description = "Vivliostyle Book style Theme for Hugo"
 homepage = "https://github.com/shunito/vibook"
 tags = ["Docs","Documentation", ]
 features = []
