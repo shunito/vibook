@@ -2,7 +2,13 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }}{{ end }}{{ end }}</title>
+        <title>
+            {{- if eq .Kind "home" -}}
+                {{- .Site.Title -}}
+            {{- else -}}
+                {{ block "title" . }}{{ with .Params.Title }}{{ . }}{{ end }}{{ end }}
+            {{- end -}}
+        </title>
 
         <meta name="writing-mode" content="{{ with $.Params.writingMode }}{{ . }}{{else}}{{ .Site.Params.writingMode }}{{end}}" />
         <meta name="pageSize" content="{{ with $.Params.pageSize }}{{ . }}{{else}}{{ .Site.Params.pageSize }}{{end}}" />
