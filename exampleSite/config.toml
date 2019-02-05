@@ -1,6 +1,6 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://example.com"
 languageCode = "ja"
-title = "viBook テストコンテンツ"
+title = "viBook Sample"
 hasCJKLanguage = true
 
 DefaultContentLanguage = "ja"
