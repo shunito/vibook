@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ with $.Params.lang }}{{ . }}{{else}}{{ $.Site.LanguageCode | default "en" }}{{end}}">
     {{- partial "head.html" . -}}
+    {{ if eq .Kind "home" }}
+    <body class="home">
+    {{ else }}
     <body class="{{ with $.Params.writingMode }}{{ . }}{{else}}{{ $.Site.Params.writingMode | default "horizontal-tb" }}{{end}}">
+    {{ end }}
         {{- partial "header.html" . -}}
-        <main id="content">
+        <main id="content" class="{{ .Type }}">
         {{- block "main" . }}{{- end }}
         </main>
         {{- partial "footer.html" . -}}
