@@ -1,0 +1,444 @@
+@charset "UTF-8";
+/*  viBook Pages */
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace epub "http://www.idpf.org/2007/ops";
+html {
+  orphans: 2;
+  widows: 2; }
+
+body {
+  text-align: justify;
+  text-justify: inter-ideograph; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.horizontal-tb {
+  -epub-writing-mode: horizontal-tb;
+  -ms-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb; }
+
+.vertical-rl {
+  -epub-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl; }
+
+hr {
+  border: none;
+  border-right: 1pt solid black;
+  height: 80%;
+  margin: auto 8.5pt; }
+
+.horizontal-tb blockquote,
+.horizontal-tb ul,
+.horizontal-tb fieldset,
+.horizontal-tb form,
+.horizontal-tb ol,
+.horizontal-tb dl,
+.horizontal-tb menu {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding: 0; }
+
+.vertical-rl blockquote,
+.vertical-rl ul,
+.vertical-rl fieldset,
+.vertical-rl form,
+.vertical-rl ol,
+.vertical-rl dl,
+.vertical-rl menu {
+  margin-right: 1.25em;
+  margin-left: 1.25em;
+  padding: 0; }
+
+blockquote blockquote, blockquote ol, blockquote ul, blockquote dl, ol blockquote, ol ol, ol ul, ol dl, ul blockquote, ul ol, ul ul, ul dl, dl blockquote, dl ol, dl ul, dl dl {
+  margin-right: 0em;
+  margin-left: 0em; }
+
+.horizontal-tb ol,
+.horizontal-tb ul,
+.horizontal-tb menu,
+.horizontal-tb dd {
+  margin-left: 2em; }
+
+.vertical-rl ol,
+.vertical-rl ul,
+.vertical-rl menu,
+.vertical-rl dd {
+  margin-top: 2em; }
+
+a {
+  color: #0538b2; }
+
+a:hover {
+  color: #b2058e; }
+
+a:active {
+  color: #b27f05; }
+
+pre {
+  white-space: pre-wrap; }
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%; }
+
+hr {
+  margin: 1.25em; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6, hr {
+  break-after: avoid; }
+
+/* 縦中横 */
+.tcy {
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-upright: all;
+  text-combine-horizontal: all;
+  text-combine: horizontal; }
+
+#toc ol {
+  list-style-type: none; }
+
+#toc ol a {
+  text-decoration: none; }
+
+figure.fullWidth {
+  widows: 100%;
+  max-width: 100%;
+  text-align: center;
+  -epub-writing-mode: horizontal-tb;
+  -ms-writing-mode: horizontal-tb;
+  writing-mode: horizontal-tb; }
+
+/* Typography settings */
+/* Noto Serif Japanese */
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-ExtraLight.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 600;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-SemiBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Serif Japanese';
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/NotoSerifCJKjp/NotoSerifCJKjp-Black.otf") format("opentype"); }
+
+/* Noto Sans Japanese */
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 100;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Thin.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-DemiLight.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/NotoSansCJKjp/NotoSansCJKjp-Black.otf") format("opentype"); }
+
+/* Source Han CodeJP */
+@font-face {
+  font-family: 'Source Han CodeJP';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/SourceHanCodeJP/SourceHanCodeJP-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Source Han CodeJP';
+  font-style: normal;
+  font-weight: 200;
+  src: url("fonts/SourceHanCodeJP/SourceHanCodeJP-Light.otf") format("opentype"); }
+
+/* Font Settings */
+html {
+  font-size: 0.25mm; }
+
+#content {
+  font-family: 'Noto Serif Japanese', sans-serif, serif;
+  font-size: 18rem;
+  font-weight: 400;
+  line-height: 1.6; }
+
+#content code {
+  font-size: 14rem;
+  font-family: 'Source Han CodeJP', monospace;
+  font-weight: 300;
+  line-height: 1.3; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: inherit; }
+
+h1 {
+  font-size: 22rem;
+  font-weight: 700; }
+
+h2 {
+  font-size: 20rem; }
+
+h3 {
+  font-size: 19rem; }
+
+h4 {
+  font-size: 18rem; }
+
+h5 {
+  font-size: 16rem; }
+
+h6 {
+  font-size: 14rem; }
+
+.vertical-rl h1,
+.vertical-rl h2,
+.vertical-rl h3,
+.vertical-rl h4,
+.vertical-rl h5,
+.vertical-rl h6 {
+  margin-right: 1.25em;
+  margin-left: 0.6em; }
+
+.horizontal-tb h1,
+.horizontal-tb h2,
+.horizontal-tb h3,
+.horizontal-tb h4,
+.horizontal-tb h5,
+.horizontal-tb h6 {
+  margin-top: 1.25em;
+  margin-bottom: 0.6em; }
+
+.vertical-rl p {
+  margin-right: 0.6em;
+  margin-left: 1.25em;
+  hanging-punctuation: force-end; }
+
+.horizontal-tb p {
+  margin-top: 0.6em;
+  margin-bottom: 1.25em;
+  hanging-punctuation: force-end; }
+
+.footnotes {
+  font-size: 0.8em; }
+
+figure.fullWidth h4 {
+  font-size: 0.8em; }
+
+/* page size from config.toml */
+@page {
+  size: A5; }
+
+/* ページ 判型設定 */
+/* キーワード指定できるサイズ
+<page-size> = A5 | A4 | A3 | B5 | B4 | letter | legal | ledger
+A5:148×210mm
+A4:210×297mm
+A3:297×420mm
+B5:176x250mm
+B4:250x353mm
+JIS-B5:182x257mm
+JIS-B4:257x364mm
+letter:8.5inx11in
+legal:8.5x14in
+ledger:11x17in
+
+四六判:788×1091mm
+*/
+@page {
+  margin-top: 15mm;
+  margin-left: 15mm;
+  margin-right: 15mm;
+  margin-bottom: 20mm;
+  vertical-align: top;
+  counter-increment: vPage; }
+
+@page :left {
+  @bottom-left {
+    content: counter(vPage);
+    margin-left: 3.75pt;
+    margin-bottom: 6mm;
+    writing-mode: horizontal-tb; } }
+
+@page :right {
+  @bottom-right {
+    content: counter(vPage);
+    margin-right: 3.75pt;
+    margin-bottom: 6mm;
+    writing-mode: horizontal-tb; } }
+
+/* 目次のページを1ページにする */
+/* Coverはページに数えない */
+/* TODO: frontmatterなどノンブル無しのページ形式を作る  */
+#toc {
+  counter-reset: vPage 1; }
+
+#toc a::after {
+  content: target-counter(attr(href), vPage, decimal);
+  writing-mode: horizontal-tb;
+  float: right; }
+
+#toc li {
+  clear: both; }
+
+#toc .depth-1 {
+  font-weight: 500; }
+
+#toc .depth-2 {
+  text-indent: 1em; }
+
+#toc .depth-3 {
+  text-indent: 2em; }
+
+/* 通常ページ見出しはH2：改ページする */
+h2 {
+  page-break-before: always;
+  counter-reset: sections 1; }
+
+/* ブロック途中で改ページしないでほしい */
+.footnotes,
+figure {
+  break-inside: avoid-page; }
+
+/* section */
+.section {
+  counter-increment: sections; }
+
+/* math  */
+.math {
+  font-size: 0.8em; }
+
+/*  Original Styles  */
+section.frontmatter {
+  font-size: 12rem;
+  padding: 1em;
+  background-color: #EEE;
+  border-radius: 5px; }
+
+.horizontal-tb section.frontmatter {
+  text-align: center; }
+
+.highlight {
+  background-color: #272822;
+  padding: 0.5em;
+  line-height: 1.3;
+  font-weight: lighter;
+  border: 1px solid #CCC; }
+
+/* Home */
+/* home-page */
+#content .home {
+  font-family: sans-serif;
+  padding: 1em;
+  font-size: 1em;
+  margin: 1em auto;
+  max-width: 850px; }
+
+.home section {
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  margin-bottom: 0.5em; }
+
+.home h1,
+.home h2,
+.home h3,
+.home h4,
+.home h5 {
+  margin: 0 0 0.5em 0; }
+
+.home h2 {
+  border-radius: 4px;
+  padding: 0.2em 0.5em;
+  background-color: #EEE; }
+
+.home p {
+  margin: 0 0 0.2em 1em; }
+
+.home ol {
+  margin-bottom: 1em; }
+
+.settings {
+  margin: 1em;
+  border: 1px solid #CCC; }
+
+.settings th,
+.settings td {
+  padding: 0.4em;
+  vertical-align: top;
+  border: 1px solid #DDD;
+  font-weight: bold; }
+
+.settings thead th,
+.settings thead td {
+  background-color: #DDD; }
+
+.settings tbody th {
+  background-color: #EEE; }
