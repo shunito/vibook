@@ -82,26 +82,28 @@ This is an example of site config.toml:
 # Pros
 viBookは静的サイトジェネレータHugoの強力なサイト（ページ）生成機能にVivliostyleによるCSS出版の機能を組み合わせ、複数のMarkdownファイルからEPUBやPDFを生成する作業を楽にします。
 
-- Hugoの機能から
-  - 組み込みの軽量サーバによるリアルタイムプレビュー。 （原稿更新すると自動的にリロードしてくれます。）
-  - Hugoのテンプレート機能による柔軟なインクルードや目次などリストの生成。
-    - content.opfと論理目次（nav.html）の半自動生成により、Vivliostyleに擬似的にEPUBとして認識させ、全ページ通してのプレビューが可能です。
-  - ShortcodesによるMarkdownの拡張。  
-  [標準で準備されているShortcodes](https://gohugo.io/content-management/shortcodes/)だけでもいろいろできます。
-    - figure は特に使っていくと良さそう。
-    - 組み込みのコードハイライト
-    - viBookではmathとsectionの2つを用意。
-      - math はmarkdown変換を通さずVivliostyleのMathJaxに値を渡します。
-      - section はclassを追加するための汎用のブロックです。CSSの拡張と合わせるといろいろ捗ります。
-  - [Hugo Pipes](https://gohugo.io/hugo-pipes/)によるCSSの効率的な管理。
-    - Hugoの変数をSCSS内で利用できるため、ページサイズをCSSに反映したり（今のところこれくらいしか使ってないですが）
-    - ※Hugo Pipesを使うにはHugo Extended版が必要です。
-- Vivliostyleの機能から
-  - @Page、ノンブル、ページ数カウンターなど。
-  - Mathjax（HugoのShortCodeと組み合わせ）
-  - フォントをダウンロードしてCSSで指定すれば、サブセット化してくれるみたい。PDFにするには十分な感じ。
-    - 生成したPDFをイラレで開いてPDF/X-4とかで保存し直すのが印刷向けには一番楽みたい。
-  - Vivliostyleの使い方など、[公式ドキュメント](https://vivliostyle.github.io/vivliostyle.js/docs/ja/)参照でお願いします。
+## Hugoの機能から
+- 組み込みの軽量サーバによるリアルタイムプレビュー。 （原稿更新すると自動的にリロードしてくれます。）
+- Hugoのテンプレート機能による柔軟なインクルードや目次などリストの生成。
+  - content.opfと論理目次（nav.html）の半自動生成により、Vivliostyleに擬似的にEPUBとして認識させ、全ページ通してのプレビューが可能です。
+- ShortcodesによるMarkdownの拡張。  
+[標準で準備されているShortcodes](https://gohugo.io/content-management/shortcodes/)だけでもいろいろできます。
+  - figure は特に使っていくと良さそう。
+  - 組み込みのコードハイライト
+  - viBookではmathとsectionの2つを用意。
+    - math はmarkdown変換を通さずVivliostyleのMathJaxに値を渡します。
+    - section はclassを追加するための汎用のブロックです。CSSの拡張と合わせるといろいろ捗ります。
+- [Hugo Pipes](https://gohugo.io/hugo-pipes/)によるCSSの効率的な管理。
+  - Hugoの変数をSCSS内で利用できるため、ページサイズをCSSに反映したり（今のところこれくらいしか使ってないですが）
+  - ※Hugo Pipesを使うにはHugo Extended版が必要です。
+
+## Vivliostyleの機能から
+- @Page、ノンブル、ページ数カウンターなど。
+- Mathjax（HugoのShortCodeと組み合わせ）
+- フォントをダウンロードしてCSSで指定すれば、サブセット化してくれるみたい。PDFにするには十分な感じ。
+  - 生成したPDFをイラレで開いてPDF/X-4とかで保存し直すのが印刷向けには一番楽みたい。
+- Vivliostyleの使い方など、[公式ドキュメント](https://vivliostyle.github.io/vivliostyle.js/docs/ja/)参照でお願いします。
+
 
 # Cons
 いろいろ課題があります。  
