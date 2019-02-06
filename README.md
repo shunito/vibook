@@ -4,13 +4,14 @@ Vivliostyle Book style Theme for
 
 
 # Features
+- include [Vivliostyle](https://vivliostyle.org/)
 - Generate OPF(Open Packaging Format)
 - Generate Navigation (Table of Contents) 
 - 3 Content Types
   - Cover : for cover pages (full cover image) 
   - Nav : navigation page
   - Pages : main contents
-- Configure Book style (@page etc)
+- Configure Book style
   - @page size
   - Writing Mode : vertical-rl or horizontal-tb
   - Page Progression Direction : rtl / ltr
@@ -70,17 +71,17 @@ This is an example of site config.toml:
 - pageSize : Vivliostyleで出力するページサイズの設定
   以下のサイズは文字列で設定できます。  
   A5 | A4 | A3 | B5 | B4 | letter | legal | ledger  
-  それ以外の設定をする場合には、CSS(book.scss)を修正してください。
+  それ以外の設定をする場合には、[@pageのsize](https://developer.mozilla.org/ja/docs/Web/CSS/@page/size)規約に則り記載してください。
   landscapeとportraitも使えるはず。（要検証）
 - writingMode : 本全体での縦書/横書の基本設定。ページ単体で設定された場合はページ側が有効。
-- hasCover : カバーページをOPFに出力するかどうか。
+- hasCover : カバーページをOPFに出力するかどうか。（ページとして表示するかどうか）
 - pageProgressionDirection : ページの綴じ方向
   - "rtl" : 右から左
   - "ltr" : 左から右
 - dendenFuture : （実験的機能）でんでんマークダウン記法を有効にするかどうか。現在のところ縦中横とルビ記法（グループルビのみ）だけの中途半端な状態。
 
 # Pros
-viBookは静的サイトジェネレータHugoの強力なサイト（ページ）生成機能にVivliostyleによるCSS出版の機能を組み合わせ、複数のMarkdownファイルからEPUBやPDFを生成する作業を楽にします。
+viBookは静的サイトジェネレータHugoの強力なサイト（ページ）生成機能にVivliostyleによるCSS組版の機能を組み合わせ、複数のMarkdownファイルからEPUBやPDFを生成する作業を楽にします。
 
 ## Hugoの機能から
 - 組み込みの軽量サーバによるリアルタイムプレビュー。 （原稿更新すると自動的にリロードしてくれます。）
@@ -118,7 +119,7 @@ viBookは静的サイトジェネレータHugoの強力なサイト（ページ�
 結局Markdownにsectionという汎用のShortcodesを作ってしのぎました。定義リストの件はHugoにPR送ったので取り込まれるといいなぁ。
 - Readmeの途中で力尽きる作者の英語力
   - Hugoには多言語化機能があるので、色々できそうではあるんだけど。
-  - Readmeをちゃんと英語で書いてテスト通ればHugoの[Hugo Themes website](https://themes.gohugo.io/)にも載せられるらしい。
+  - Readmeをちゃんと英語で書いてテスト通ればHugoの[Hugo Themes website](https://themes.gohugo.io/)にも載せられるらしい。→登録申請しました。
 
 
 # License
