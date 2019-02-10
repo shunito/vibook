@@ -121,6 +121,9 @@ viBookは静的サイトジェネレータHugoの強力なサイト（ページ�
   - Hugoには多言語化機能があるので、色々できそうではあるんだけど。
   - Readmeをちゃんと英語で書いてテスト通ればHugoの[Hugo Themes website](https://themes.gohugo.io/)にも載せられるらしい。→登録申請しました。
 
+# Explanatory articles
+- [Hugoテーマ「viBook」を使ったCSS組版（前半）](https://qiita.com/shunito/items/6a628d993cce3cd55b65)
+- [Hugoテーマ「viBook」を使ったCSS組版（後編）](https://qiita.com/shunito/items/28eedf461b911dc9c15d)
 
 # License
 ## [Vivliostyle](https://github.com/vivliostyle/vivliostyle.js)
